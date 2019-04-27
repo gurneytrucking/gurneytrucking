@@ -1,8 +1,3 @@
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
@@ -254,5 +249,17 @@
 			});
 
 		}
+
+	$('#sendmessage').on("click", function () {
+		message = $("#quoteform").serialize();
+		$.ajax({
+			url: "https://formspree.io/nkback@gmail.com", 
+			method: "POST",
+			data: {message: message},
+			dataType: "json"
+		});
+		alert('Thanks for the email, we\'ll be in touch promptly.');
+		return false;
+	})
 
 })(jQuery);
