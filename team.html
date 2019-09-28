@@ -11,15 +11,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style type="text/css">
-			@media screen and (min-width: 1681px) {
-					#wrapper > .bg {
-						background-position: 50% 60% !important;
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+				$(document).ready(function() {
+					var OSName="Unknown OS";
+					if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+					if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+					if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+					if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+	
+					if(OSName !== "MacOS") {
+						$('head').append("<style>@media screen and (min-width: 1681px) { #wrapper > .bg {	background-position: 50% 60% !important;}}	#wrapper > .bg { background-position: 50% 64%; }</style>");
+					} else {
+						$('head').append("<style>#wrapper > .bg { background-position: center, center, top center; }</style>");
 					}
-				}
-				#wrapper > .bg {
-						background-position: 50% 64%;
-				}
+				});
+		</script>
+		<style type="text/css">
 			html {
 				box-sizing: border-box;
 			}
@@ -606,7 +614,6 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
