@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Gurney Trucking</title>
@@ -11,10 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/jquery.min.js"></script>
+
 		<!-- Start of Async Drift Code -->
 		<script>
 			"use strict";
-	
+
 			!function() {
 			var t = window.driftt = window.drift = window.driftt || [];
 			if (!t.init) {
@@ -36,9 +33,24 @@
 			}
 			}();
 			drift.SNIPPET_VERSION = '0.3.1';
-			drift.load('cbsaz6b7tzms');
+			drift.load('x6isn55ir2mm');
 		</script>
-	<!-- End of Async Drift Code -->
+		<!-- End of Async Drift Code -->
+			<script>
+					$(document).ready(function() {
+						var OSName="Unknown OS";
+						if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+						if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+						if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+						if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+		
+						if(OSName !== "MacOS") {
+							$('head').append("<style>@media screen and (min-width: 1681px) { #wrapper > .bg {	background-position: 50% 93% !important;}}	#wrapper > .bg { background-position: 50% 64%; }</style>");
+						} else {
+							$('head').append("<style>#wrapper > .bg { background-position: center, center, top center; }</style>");
+						}
+					});
+			</script>
 	</head>
 	<body class="is-preload">
 
@@ -91,58 +103,14 @@
 									<li><a href="jobdetails.html" class="button large">Join our Team</a></li>
 								</ul>
 							</article>
-
-						<!-- Posts -->
-						<!--
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-						-->
-						<!-- Footer 
-							<footer>
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-						-->	
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form id="quoteform" method="post" action="#">
+							<form id="quoteform" method="post" class="gform" action="https://script.google.com/macros/s/AKfycbzhPJ3UhR7sBehO8C6FO7S8-69-iNP-1_AZim1CFkolszmPK5A/exec">
 								<div class="fields">
+									<h3>Contact Us</h3>
 									<div class="field">
 										<label for="name">Name</label>
 										<input type="text" name="name" id="name" />
@@ -195,13 +163,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script data-cfasync="false" type="text/javascript" src="assets/js/send-email.js"></script>
 
 	</body>
 </html>
