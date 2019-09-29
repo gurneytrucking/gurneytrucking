@@ -4652,3 +4652,6 @@ input, select, textarea {
 		}
 
 	}
+	.content-timeline h2 {
+		text-align: center;
+	}
